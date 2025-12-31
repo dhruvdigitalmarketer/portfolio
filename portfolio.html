@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhruv | Digital Marketing Specialist Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .service-content { display: none; }
+        .service-content.active { display: block; }
+        .case-details { display: none; }
+        .case-details.active { display: block; }
+        .tab-active { background-color: #0f172a !important; color: white !important; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
+    </style>
+</head>
+<body class="bg-white">
+
+    <header class="bg-gradient-to-br from-slate-50 to-gray-100 border-b border-slate-200">
+        <div class="container mx-auto px-4 py-16 md:py-24 text-center">
+            <div class="inline-flex items-center gap-2 bg-slate-900 text-white rounded-full px-5 py-2 mb-6 shadow-sm">
+                <span class="text-sm font-medium">🚀 Digital Marketing Specialist</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-4 text-slate-900">Dhruv</h1>
+            <p class="text-xl md:text-2xl text-slate-600 mb-6 font-light">Digital Marketing Specialist Portfolio</p>
+            <p class="text-lg text-slate-600 mb-3 leading-relaxed max-w-3xl mx-auto">
+                I help businesses increase their online visibility, generate more qualified leads, and grow revenue through strategic SEO, Google Business Profile optimization, paid advertising, and conversion-focused websites.
+            </p>
+            <p class="text-sm text-slate-500 mb-10">22 Years Old • 2+ Years Experience • Delhi, India</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="mailto:dhruv.marketing01@gmail.com" class="bg-slate-900 hover:bg-slate-800 text-white px-8 py-4 rounded-lg font-semibold flex items-center gap-2 transition-all shadow-lg">
+                    📧 Get In Touch
+                </a>
+                <a href="tel:9591602370" class="bg-white hover:bg-slate-50 border-2 border-slate-900 text-slate-900 px-8 py-4 rounded-lg font-semibold flex items-center gap-2 transition-all">
+                    📞 9591602370
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+                <div class="text-center p-6 bg-slate-50 rounded-xl border border-slate-200 hover:shadow-md transition-all">
+                    <div class="text-4xl font-bold mb-2 text-slate-900">20X</div>
+                    <div class="text-slate-600 text-sm font-medium">Traffic Growth</div>
+                </div>
+                <div class="text-center p-6 bg-slate-50 rounded-xl border border-slate-200 hover:shadow-md transition-all">
+                    <div class="text-4xl font-bold mb-2 text-slate-900">10X</div>
+                    <div class="text-slate-600 text-sm font-medium">Lead Increase</div>
+                </div>
+                <div class="text-center p-6 bg-slate-50 rounded-xl border border-slate-200 hover:shadow-md transition-all">
+                    <div class="text-4xl font-bold mb-2 text-slate-900">900+</div>
+                    <div class="text-slate-600 text-sm font-medium">Monthly Clicks</div>
+                </div>
+                <div class="text-center p-6 bg-slate-50 rounded-xl border border-slate-200 hover:shadow-md transition-all">
+                    <div class="text-4xl font-bold mb-2 text-slate-900">2+ Yrs</div>
+                    <div class="text-slate-600 text-sm font-medium">Experience</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gradient-to-b from-white to-slate-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-slate-900">What I Do</h2>
+                <p class="text-slate-600 text-lg max-w-2xl mx-auto">Full-spectrum digital marketing services to help your business grow online</p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-3 mb-10" id="service-tabs">
+                <button onclick="showService('seo')" class="tab-btn px-6 py-3 rounded-lg font-semibold transition-all bg-white text-slate-700 border-2 border-slate-200 tab-active" data-service="seo">🔍 SEO & Growth</button>
+                <button onclick="showService('gbp')" class="tab-btn px-6 py-3 rounded-lg font-semibold transition-all bg-white text-slate-700 border-2 border-slate-200" data-service="gbp">⭐ Google Business</button>
+                <button onclick="showService('ads')" class="tab-btn px-6 py-3 rounded-lg font-semibold transition-all bg-white text-slate-700 border-2 border-slate-200" data-service="ads">⚡ Paid Ads</button>
+                <button onclick="showService('web')" class="tab-btn px-6 py-3 rounded-lg font-semibold transition-all bg-white text-slate-700 border-2 border-slate-200" data-service="web">🌐 Web & CRO</button>
+            </div>
+
+            <div class="bg-white border-2 border-slate-200 rounded-2xl p-8 md:p-10 max-w-5xl mx-auto shadow-sm" id="service-display">
+                </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-slate-900">Proven Results</h2>
+                <p class="text-slate-600 text-lg max-w-2xl mx-auto">Real campaigns, real growth, real impact across different industries</p>
+            </div>
+
+            <div class="space-y-6 max-w-6xl mx-auto" id="case-studies-container">
+                </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-slate-50">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-slate-900">Industries I Serve</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto" id="industries-grid">
+                </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-slate-900 text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-5xl font-bold mb-4 text-white">Ready to Grow Your Business?</h2>
+            <p class="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">Let's discuss how strategic digital marketing can help you achieve your goals.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="mailto:dhruv.marketing01@gmail.com" class="bg-white text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg shadow-lg">dhruv.marketing01@gmail.com</a>
+                <a href="tel:9591602370" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg">+91 9591602370</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-8 bg-white border-t border-slate-200 text-center text-slate-600 text-sm">
+        © 2025 Dhruv | Digital Marketing Specialist Portfolio | All Rights Reserved
+    </footer>
+
+    <script>
+        const services = {
+            seo: {
+                title: "SEO & Organic Growth",
+                description: "Get found by customers actively searching for your services",
+                offerings: ["Technical SEO audits", "Keyword strategy", "On-page optimization", "Local SEO", "Link building"],
+                results: "0 to 900 clicks in 30 days | 20x traffic growth in 12 months"
+            },
+            gbp: {
+                title: "Google Business Profile",
+                description: "Dominate local map searches and get more calls from Google",
+                offerings: ["Complete GBP setup", "Listing recovery", "Review management", "Local keyword targeting", "Monthly updates"],
+                results: "Managed 20+ GBP for dental clinics, mortgage brokers & service businesses across Canada & USA"
+            },
+            ads: {
+                title: "Paid Advertising",
+                description: "Generate qualified leads with strategic Google & Meta campaigns",
+                offerings: ["Google Search Ads", "Meta Ads", "Conversion tracking", "Budget optimization", "Landing pages"],
+                results: "Scaled B2C campaigns to 10x qualified leads with optimized ad spend"
+            },
+            web: {
+                title: "Website Creation & CRO",
+                description: "Fast, conversion-focused websites that turn visitors into customers",
+                offerings: ["Website design", "Mobile responsiveness", "CRO optimization", "UX improvements", "Site architecture"],
+                results: "Complete website revamps improving both user experience and search rankings"
+            }
+        };
+
+        const caseStudies = [
+            { id: 1, title: "AutoAid - Automotive", tag: "B2C Business", metric: "20X Traffic", challenge: "Zero organic traffic, struggling to compete in local market.", approach: ["Technical SEO overhaul", "Targeted keyword research", "Meta Ads for immediate leads"], results: ["20x organic traffic growth", "10x increase in leads", "897 clicks in 30 days"] },
+            { id: 2, title: "CII Skills - EdTech", tag: "Corporate", metric: "Google AI Featured", challenge: "Poor crawlability and outdated structure.", approach: ["Site architecture restructure", "Speed optimization", "Entity-based SEO"], results: ["Featured in Google AI Overviews", "Improved indexation", "Enhanced UX"] }
+        ];
+
+        const industries = [
+            { name: "Healthcare", icon: "⚕️" }, { name: "Finance", icon: "💰" },
+            { name: "Automotive", icon: "🚗" }, { name: "Home Services", icon: "🔧" },
+            { name: "Education", icon: "📚" }, { name: "Tech & SaaS", icon: "💻" },
+            { name: "Real Estate", icon: "🏡" }, { name: "Retail", icon: "🛍️" }
+        ];
+
+        function showService(key) {
+            const service = services[key];
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => btn.classList.remove('tab-active'));
+            document.querySelector(`[data-service="${key}"]`).classList.add('tab-active');
+
+            const html = `
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-16 h-16 rounded-2xl bg-slate-900 flex items-center justify-center text-3xl">🚀</div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-slate-900">${service.title}</h3>
+                        <p class="text-slate-600">${service.description}</p>
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-3 mb-8">
+                    ${service.offerings.map(item => `<div class="bg-slate-50 p-4 border rounded-lg text-sm">➔ ${item}</div>`).join('')}
+                </div>
+                <div class="bg-slate-900 text-white rounded-xl p-6">
+                    <strong>Track Record:</strong> <p class="text-sm opacity-90">${service.results}</p>
+                </div>
+            `;
+            document.getElementById('service-display').innerHTML = html;
+        }
+
+        function toggleCase(id) {
+            const el = document.getElementById(`case-${id}`);
+            el.classList.toggle('active');
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            showService('seo');
+            
+            // Render Case Studies
+            const caseContainer = document.getElementById('case-studies-container');
+            caseStudies.forEach(study => {
+                caseContainer.innerHTML += `
+                    <div class="border-2 rounded-xl overflow-hidden border-slate-200">
+                        <button onclick="toggleCase(${study.id})" class="w-full p-6 flex justify-between items-center hover:bg-slate-50">
+                            <div class="text-left">
+                                <span class="text-xs font-bold uppercase tracking-wider text-slate-500">${study.tag}</span>
+                                <h3 class="text-xl font-bold">${study.title}</h3>
+                            </div>
+                            <div class="text-right font-bold text-slate-900">${study.metric} ▾</div>
+                        </button>
+                        <div id="case-${study.id}" class="case-details p-6 bg-slate-50 border-t">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div><strong>Approach:</strong><ul class="text-sm mt-2">${study.approach.map(a => `<li>• ${a}</li>`).join('')}</ul></div>
+                                <div><strong>Results:</strong><ul class="text-sm mt-2">${study.results.map(r => `<li>✅ ${r}</li>`).join('')}</ul></div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            // Render Industries
+            const indGrid = document.getElementById('industries-grid');
+            industries.forEach(ind => {
+                indGrid.innerHTML += `
+                    <div class="bg-white border-2 border-slate-200 rounded-xl p-6 hover:border-slate-900 transition-all">
+                        <div class="text-4xl mb-2">${ind.icon}</div>
+                        <div class="font-semibold">${ind.name}</div>
+                    </div>
+                `;
+            });
+        });
+    </script>
+</body>
+</html>
