@@ -3,225 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dhruv | Digital Marketing Specialist Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>ERPLI | Professional Institute Management & LMS for Teachers</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+
     <style>
-        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        .service-content { display: none; }
-        .service-content.active { display: block; }
-        .case-details { display: none; }
-        .case-details.active { display: block; }
-        .tab-active { background-color: #0f172a !important; color: white !important; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
+        :root {
+            --bg-color: #FFFBF5;
+            --text-color: #3D405B;
+            --primary-color: #F28482; /* Coral */
+            --secondary-color: #81B29A; /* Sage Green */
+            --highlight-color: #F4D35E; /* Yellow */
+            --card-bg: #FFFFFF;
+            --border-color: #E0E0E0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Nunito', sans-serif; background-color: var(--bg-color); color: var(--text-color); overflow-x: hidden; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        /* Header */
+        header { padding: 20px 0; position: sticky; top: 0; background: rgba(255, 251, 245, 0.95); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 1px solid var(--border-color); }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 2rem; font-weight: 800; text-decoration: none; color: var(--text-color); }
+        .logo span { color: var(--primary-color); }
+        .nav-links { display: flex; gap: 30px; list-style: none; }
+        .nav-links a { text-decoration: none; color: var(--text-color); font-weight: 700; transition: 0.3s; }
+        .nav-links a:hover { color: var(--primary-color); }
+        .cta-btn { background: var(--primary-color); color: #fff; padding: 12px 28px; border-radius: 50px; text-decoration: none; font-weight: 800; box-shadow: 0 4px 15px rgba(242, 132, 130, 0.3); }
+
+        /* Hero */
+        .hero { padding: 100px 0 150px; text-align: center; position: relative; }
+        .hero h1 { font-size: 4rem; margin-bottom: 20px; }
+        .hero p { font-size: 1.3rem; max-width: 800px; margin: 0 auto 40px; color: var(--gray); }
+        .price-badge { background: var(--highlight-color); padding: 10px 25px; border-radius: 12px; display: inline-block; font-weight: 800; margin-bottom: 25px; }
+
+        /* Sections */
+        .section { padding: 100px 0; position: relative; z-index: 2; background: #fff; }
+        .section-title { text-align: center; font-size: 2.8rem; margin-bottom: 60px; }
+        .section-title span { color: var(--secondary-color); position: relative; z-index: 1; }
+        .section-title span::after { content: ''; position: absolute; width: 100%; height: 12px; background: var(--highlight-color); bottom: 5px; left: 0; z-index: -1; opacity: 0.5; }
+
+        /* Feature Cards */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .card { background: var(--bg-color); padding: 40px; border-radius: 25px; border: 1px solid var(--border-color); transition: 0.3s; }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 15px 35px rgba(0,0,0,0.05); }
+        .card .icon-box { width: 70px; height: 70px; border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-bottom: 25px; }
+        .bg-coral { background: rgba(242, 132, 130, 0.15); color: var(--primary-color); }
+        .bg-sage { background: rgba(129, 178, 154, 0.15); color: var(--secondary-color); }
+        .bg-yellow { background: rgba(244, 211, 94, 0.15); color: var(--highlight-color); }
+
+        /* Park Scene (Fixed to Hero) */
+        .park-scene { position: absolute; bottom: 0; width: 100%; height: 120px; overflow: hidden; background: #A6C48A; }
+        .tree { position: absolute; bottom: 10px; }
+
+        /* FAQ */
+        .faq-box { max-width: 800px; margin: 0 auto; }
+        details { background: var(--bg-color); padding: 20px; border-radius: 15px; margin-bottom: 15px; cursor: pointer; }
+        summary { font-weight: 800; font-size: 1.1rem; }
+
+        footer { background: var(--text-color); color: #fff; padding: 80px 0; text-align: center; }
+        
+        @media (max-width: 768px) { .hero h1 { font-size: 2.5rem; } }
     </style>
 </head>
-<body class="bg-white">
+<body>
 
-    <header class="bg-gradient-to-br from-slate-50 to-gray-100 border-b border-slate-200">
-        <div class="container mx-auto px-4 py-16 md:py-24 text-center">
-            <div class="inline-flex items-center gap-2 bg-slate-900 text-white rounded-full px-5 py-2 mb-6 shadow-sm">
-                <span class="text-sm font-medium">🚀 Digital Marketing Specialist</span>
-            </div>
-            <h1 class="text-5xl md:text-7xl font-bold mb-4 text-slate-900">Dhruv</h1>
-            <p class="text-xl md:text-2xl text-slate-600 mb-6 font-light">Digital Marketing Specialist Portfolio</p>
-            <p class="text-lg text-slate-600 mb-3 leading-relaxed max-w-3xl mx-auto">
-                I help businesses increase their online visibility, generate more qualified leads, and grow revenue through strategic SEO, Google Business Profile optimization, paid advertising, and conversion-focused websites.
-            </p>
-            <p class="text-sm text-slate-500 mb-10">22 Years Old • 2+ Years Experience • Delhi, India</p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="mailto:dhruv.marketing01@gmail.com" class="bg-slate-900 hover:bg-slate-800 text-white px-8 py-4 rounded-lg font-semibold flex items-center gap-2 transition-all shadow-lg">
-                    📧 Get In Touch
-                </a>
-                <a href="tel:9591602370" class="bg-white hover:bg-slate-50 border-2 border-slate-900 text-slate-900 px-8 py-4 rounded-lg font-semibold flex items-center gap-2 transition-all">
-                    📞 9591602370
-                </a>
+<header>
+    <div class="container">
+        <nav>
+            <a href="#" class="logo">ERPLI<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="#what-we-do">What We Do</a></li>
+                <li><a href="#targets">Whom We Serve</a></li>
+                <li><a href="#why-us">Why Us</a></li>
+            </ul>
+            <a href="#pricing" class="cta-btn">₹999 Plan</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="container">
+            <div class="price-badge">PRO LICENSE: ₹999/YEAR</div>
+            <h1>Your Institute. Your Brand. <br><span style="color:var(--primary-color)">Your Rules.</span></h1>
+            <p>The simplest LMS & ERP dashboard for teachers who want to spend more time teaching and less time managing paperwork.</p>
+            <div style="display: flex; gap: 15px; justify-content: center;">
+                <a href="#pricing" class="cta-btn">Start Growing Today</a>
+                <a href="#what-we-do" class="cta-btn" style="background:var(--secondary-color)">See Features</a>
             </div>
         </div>
-    </header>
+        <div class="park-scene">
+            <svg class="tree" style="left:5%" width="80" height="100"><circle cx="40" cy="40" r="35" fill="#81B29A"/><rect x="35" y="70" width="10" height="30" fill="#8D5B4C"/></svg>
+            <svg class="tree" style="left:85%" width="80" height="100"><circle cx="40" cy="40" r="35" fill="#81B29A"/><rect x="35" y="70" width="10" height="30" fill="#8D5B4C"/></svg>
+        </div>
+    </section>
 
-    <section class="bg-white py-16">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-                <div class="text-center p-6 bg-slate-50 rounded-xl border border-slate-200 hover:shadow-md transition-all">
-                    <div class="text-4xl font-bold mb-2 text-slate-900">20X</div>
-                    <div class="text-slate-600 text-sm font-medium">Traffic Growth</div>
+    <section id="what-we-do" class="section">
+        <div class="container">
+            <h2 class="section-title">What <span>We Do</span></h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="icon-box bg-coral"><i class="fas fa-desktop"></i></div>
+                    <h3>Your Branded Website</h3>
+                    <p>We build your professional online home with your logo, domain, and colors. No "Powered by" labels—just your brand.</p>
                 </div>
-                <div class="text-center p-6 bg-slate-50 rounded-xl border border-slate-200 hover:shadow-md transition-all">
-                    <div class="text-4xl font-bold mb-2 text-slate-900">10X</div>
-                    <div class="text-slate-600 text-sm font-medium">Lead Increase</div>
+                <div class="card">
+                    <div class="icon-box bg-sage"><i class="fas fa-lock"></i></div>
+                    <h3>Secure LMS</h3>
+                    <p>Upload videos and PDFs that students can't download or steal. Content protection is our top priority.</p>
                 </div>
-                <div class="text-center p-6 bg-slate-50 rounded-xl border border-slate-200 hover:shadow-md transition-all">
-                    <div class="text-4xl font-bold mb-2 text-slate-900">900+</div>
-                    <div class="text-slate-600 text-sm font-medium">Monthly Clicks</div>
-                </div>
-                <div class="text-center p-6 bg-slate-50 rounded-xl border border-slate-200 hover:shadow-md transition-all">
-                    <div class="text-4xl font-bold mb-2 text-slate-900">2+ Yrs</div>
-                    <div class="text-slate-600 text-sm font-medium">Experience</div>
+                <div class="card">
+                    <div class="icon-box bg-yellow"><i class="fas fa-wallet"></i></div>
+                    <h3>Auto Fee Collection</h3>
+                    <p>Automated payment reminders via WhatsApp and UPI. Receipts are sent the moment payment is received.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-20 bg-gradient-to-b from-white to-slate-50">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-slate-900">What I Do</h2>
-                <p class="text-slate-600 text-lg max-w-2xl mx-auto">Full-spectrum digital marketing services to help your business grow online</p>
-            </div>
+    
 
-            <div class="flex flex-wrap justify-center gap-3 mb-10" id="service-tabs">
-                <button onclick="showService('seo')" class="tab-btn px-6 py-3 rounded-lg font-semibold transition-all bg-white text-slate-700 border-2 border-slate-200 tab-active" data-service="seo">🔍 SEO & Growth</button>
-                <button onclick="showService('gbp')" class="tab-btn px-6 py-3 rounded-lg font-semibold transition-all bg-white text-slate-700 border-2 border-slate-200" data-service="gbp">⭐ Google Business</button>
-                <button onclick="showService('ads')" class="tab-btn px-6 py-3 rounded-lg font-semibold transition-all bg-white text-slate-700 border-2 border-slate-200" data-service="ads">⚡ Paid Ads</button>
-                <button onclick="showService('web')" class="tab-btn px-6 py-3 rounded-lg font-semibold transition-all bg-white text-slate-700 border-2 border-slate-200" data-service="web">🌐 Web & CRO</button>
-            </div>
-
-            <div class="bg-white border-2 border-slate-200 rounded-2xl p-8 md:p-10 max-w-5xl mx-auto shadow-sm" id="service-display">
+    <section id="targets" class="section" style="background:var(--bg-color)">
+        <div class="container">
+            <h2 class="section-title">Whom We <span>Serve</span></h2>
+            <div class="grid">
+                <div class="card" style="background:#fff">
+                    <h3>Home Tutors</h3>
+                    <p>Professionalize your small batch with digital attendance and easy fee tracking.</p>
                 </div>
-        </div>
-    </section>
-
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-slate-900">Proven Results</h2>
-                <p class="text-slate-600 text-lg max-w-2xl mx-auto">Real campaigns, real growth, real impact across different industries</p>
-            </div>
-
-            <div class="space-y-6 max-w-6xl mx-auto" id="case-studies-container">
+                <div class="card" style="background:#fff">
+                    <h3>Coaching Centers</h3>
+                    <p>Manage multiple staff members, inventory, and hundreds of students from one admin panel.</p>
                 </div>
-        </div>
-    </section>
-
-    <section class="py-20 bg-slate-50">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-slate-900">Industries I Serve</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto" id="industries-grid">
+                <div class="card" style="background:#fff">
+                    <h3>YouTubers</h3>
+                    <p>Move your followers to your own private platform and sell course materials securely.</p>
                 </div>
-        </div>
-    </section>
-
-    <section class="py-20 bg-slate-900 text-center">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-5xl font-bold mb-4 text-white">Ready to Grow Your Business?</h2>
-            <p class="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">Let's discuss how strategic digital marketing can help you achieve your goals.</p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="mailto:dhruv.marketing01@gmail.com" class="bg-white text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg shadow-lg">dhruv.marketing01@gmail.com</a>
-                <a href="tel:9591602370" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg">+91 9591602370</a>
             </div>
         </div>
     </section>
 
-    <footer class="py-8 bg-white border-t border-slate-200 text-center text-slate-600 text-sm">
-        © 2025 Dhruv | Digital Marketing Specialist Portfolio | All Rights Reserved
-    </footer>
-
-    <script>
-        const services = {
-            seo: {
-                title: "SEO & Organic Growth",
-                description: "Get found by customers actively searching for your services",
-                offerings: ["Technical SEO audits", "Keyword strategy", "On-page optimization", "Local SEO", "Link building"],
-                results: "0 to 900 clicks in 30 days | 20x traffic growth in 12 months"
-            },
-            gbp: {
-                title: "Google Business Profile",
-                description: "Dominate local map searches and get more calls from Google",
-                offerings: ["Complete GBP setup", "Listing recovery", "Review management", "Local keyword targeting", "Monthly updates"],
-                results: "Managed 20+ GBP for dental clinics, mortgage brokers & service businesses across Canada & USA"
-            },
-            ads: {
-                title: "Paid Advertising",
-                description: "Generate qualified leads with strategic Google & Meta campaigns",
-                offerings: ["Google Search Ads", "Meta Ads", "Conversion tracking", "Budget optimization", "Landing pages"],
-                results: "Scaled B2C campaigns to 10x qualified leads with optimized ad spend"
-            },
-            web: {
-                title: "Website Creation & CRO",
-                description: "Fast, conversion-focused websites that turn visitors into customers",
-                offerings: ["Website design", "Mobile responsiveness", "CRO optimization", "UX improvements", "Site architecture"],
-                results: "Complete website revamps improving both user experience and search rankings"
-            }
-        };
-
-        const caseStudies = [
-            { id: 1, title: "AutoAid - Automotive", tag: "B2C Business", metric: "20X Traffic", challenge: "Zero organic traffic, struggling to compete in local market.", approach: ["Technical SEO overhaul", "Targeted keyword research", "Meta Ads for immediate leads"], results: ["20x organic traffic growth", "10x increase in leads", "897 clicks in 30 days"] },
-            { id: 2, title: "CII Skills - EdTech", tag: "Corporate", metric: "Google AI Featured", challenge: "Poor crawlability and outdated structure.", approach: ["Site architecture restructure", "Speed optimization", "Entity-based SEO"], results: ["Featured in Google AI Overviews", "Improved indexation", "Enhanced UX"] }
-        ];
-
-        const industries = [
-            { name: "Healthcare", icon: "⚕️" }, { name: "Finance", icon: "💰" },
-            { name: "Automotive", icon: "🚗" }, { name: "Home Services", icon: "🔧" },
-            { name: "Education", icon: "📚" }, { name: "Tech & SaaS", icon: "💻" },
-            { name: "Real Estate", icon: "🏡" }, { name: "Retail", icon: "🛍️" }
-        ];
-
-        function showService(key) {
-            const service = services[key];
-            const buttons = document.querySelectorAll('.tab-btn');
-            buttons.forEach(btn => btn.classList.remove('tab-active'));
-            document.querySelector(`[data-service="${key}"]`).classList.add('tab-active');
-
-            const html = `
-                <div class="flex items-center gap-4 mb-6">
-                    <div class="w-16 h-16 rounded-2xl bg-slate-900 flex items-center justify-center text-3xl">🚀</div>
-                    <div>
-                        <h3 class="text-2xl font-bold text-slate-900">${service.title}</h3>
-                        <p class="text-slate-600">${service.description}</p>
-                    </div>
+    <section id="why-us" class="section">
+        <div class="container">
+            <h2 class="section-title">Why <span>Choose Us</span></h2>
+            <div class="grid">
+                <div class="card">
+                    <i class="fas fa-check-circle" style="color:var(--secondary-color); font-size: 2rem;"></i>
+                    <h3 style="margin-top:15px">99% Less Manual Work</h3>
+                    <p>Attendance alerts and fee reminders happen automatically. You save 10+ hours every week.</p>
                 </div>
-                <div class="grid md:grid-cols-2 gap-3 mb-8">
-                    ${service.offerings.map(item => `<div class="bg-slate-50 p-4 border rounded-lg text-sm">➔ ${item}</div>`).join('')}
+                <div class="card">
+                    <i class="fas fa-check-circle" style="color:var(--secondary-color); font-size: 2rem;"></i>
+                    <h3 style="margin-top:15px">All-in-One Dashboard</h3>
+                    <p>CRM, LMS, Fees, and Inventory—one single login for everything. No need for multiple apps.</p>
                 </div>
-                <div class="bg-slate-900 text-white rounded-xl p-6">
-                    <strong>Track Record:</strong> <p class="text-sm opacity-90">${service.results}</p>
-                </div>
-            `;
-            document.getElementById('service-display').innerHTML = html;
-        }
+            </div>
+        </div>
+    </section>
 
-        function toggleCase(id) {
-            const el = document.getElementById(`case-${id}`);
-            el.classList.toggle('active');
-        }
+    <section class="section" style="background:var(--bg-color)">
+        <div class="container">
+            <h2 class="section-title">Common <span>Questions</span></h2>
+            <div class="faq-box">
+                <details>
+                    <summary>What is included in the ₹999 plan?</summary>
+                    <p style="padding-top:10px">Everything. You get the LMS, Fee Management, Attendance, CRM, and your own website for one full year.</p>
+                </details>
+                <details>
+                    <summary>Can I sell my own books?</summary>
+                    <p style="padding-top:10px">Yes. ERPLI includes an inventory management module where you can sell digital and physical materials.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+</main>
 
-        // Initialize
-        document.addEventListener('DOMContentLoaded', () => {
-            showService('seo');
-            
-            // Render Case Studies
-            const caseContainer = document.getElementById('case-studies-container');
-            caseStudies.forEach(study => {
-                caseContainer.innerHTML += `
-                    <div class="border-2 rounded-xl overflow-hidden border-slate-200">
-                        <button onclick="toggleCase(${study.id})" class="w-full p-6 flex justify-between items-center hover:bg-slate-50">
-                            <div class="text-left">
-                                <span class="text-xs font-bold uppercase tracking-wider text-slate-500">${study.tag}</span>
-                                <h3 class="text-xl font-bold">${study.title}</h3>
-                            </div>
-                            <div class="text-right font-bold text-slate-900">${study.metric} ▾</div>
-                        </button>
-                        <div id="case-${study.id}" class="case-details p-6 bg-slate-50 border-t">
-                            <div class="grid md:grid-cols-2 gap-6">
-                                <div><strong>Approach:</strong><ul class="text-sm mt-2">${study.approach.map(a => `<li>• ${a}</li>`).join('')}</ul></div>
-                                <div><strong>Results:</strong><ul class="text-sm mt-2">${study.results.map(r => `<li>✅ ${r}</li>`).join('')}</ul></div>
-                            </div>
-                        </div>
-                    </div>
-                `;
-            });
+<footer>
+    <div class="container">
+        <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Ready to Blossom?</h2>
+        <p style="margin-bottom: 40px; opacity: 0.8;">Join hundreds of institutes growing their brands with ERPLI.</p>
+        <a href="#" class="cta-btn">Get Started for ₹999</a>
+        <div style="margin-top: 60px; opacity: 0.5;">
+            &copy; 2026 ERPLI. Inspiring Growth Everywhere.
+        </div>
+    </div>
+</footer>
 
-            // Render Industries
-            const indGrid = document.getElementById('industries-grid');
-            industries.forEach(ind => {
-                indGrid.innerHTML += `
-                    <div class="bg-white border-2 border-slate-200 rounded-xl p-6 hover:border-slate-900 transition-all">
-                        <div class="text-4xl mb-2">${ind.icon}</div>
-                        <div class="font-semibold">${ind.name}</div>
-                    </div>
-                `;
-            });
-        });
-    </script>
 </body>
 </html>
